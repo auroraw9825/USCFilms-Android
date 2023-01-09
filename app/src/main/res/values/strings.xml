@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">USC Films</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_watchlist">Watchlist</string>
+    <string name="home_header_movies">Movies</string>
+    <string name="home_header_tvs">TV Shows</string>
+    <string name="text_topRated">Top-Rated</string>
+    <string name="text_popular">Popular</string>
+    <string name="search_hint">Search movies and TV</string>
+    <string name="ratingStar">&#9733;</string>
+    <string name="noResultFound">No result found.</string>
+    <string name="nothingWatch">Nothing saved to Watchlist</string>
+
+<!--    For pop up menu on horizontal scroll cards-->
+    <string name="pop_up_openTMDB_string">Open in TMDB</string>
+    <string name="pop_up_shareOnFacebook_string">Share on Facebook</string>
+    <string name="pop_up_shareOnTwitter_string">Share on Twitter</string>
+    <string name="pop_up_watchlist_string">Add to Watchlist</string>
+
+<!--    Footer-->
+    <string name="footer1">Powered by TMDB</string>
+    <string name="footer2">Developed by Rong Wang</string>
+
+<!--    Loading Spinner Screen text: Loading...-->
+    <string name = "loadingText">Loading...</string>
+
+</resources>

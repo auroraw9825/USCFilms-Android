@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    The spinner-->
+<!--    Make a whole Screen for this spinner screen-->
+    <LinearLayout
+        android:id="@+id/detail_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/dark_background"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/spinnerIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="300dp"
+            android:background="@color/dark_background" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loadingText"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <!--The content-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    android:visibility="invisible"
+    android:id="@+id/detail_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_background"
+        android:orientation="vertical">
+
+<!--        YouTube Video or backdrop_path Image-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/youtube_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:autoPlay="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:showFullScreenButton="false" />
+            <!--    app:videoId="tzkWB85ULJY"-->
+
+            <ImageView
+                android:id="@+id/detailImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        Title-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:background="@color/dark_blue">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:background="@color/dark_blue"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+
+<!--        Overview-->
+        <TextView
+            android:id="@+id/overviewHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Overview"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:colorClickableText="@color/silver"
+            app:showTrimExpandedText="true"
+            app:trimCollapsedText="show more"
+            app:trimExpandedText="show less"
+            app:trimLength="160"
+            app:trimMode="trimModeLength"/>
+
+
+<!--        Genres-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Genres"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
+        <TextView
+            android:id="@+id/genres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="3dp" />
+
+
+<!--        Year-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Year"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="3dp"/>
+<!--        Watchlist, Share Facebook, Twitter-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/addToWatchlist"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:layout_marginRight="7dp"
+                android:clickable="true"
+                android:focusable="true"/>
+            <ImageView
+                android:id="@+id/removewFromWatchlist"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_baseline_remove_circle_outline_24"
+                android:layout_marginRight="7dp"
+                android:clickable="true"
+                android:focusable="true"/>
+            <ImageView
+                android:id="@+id/share_facebook"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_baseline_facebook_24"
+                android:layout_marginRight="7dp"
+                android:clickable="true"
+                android:focusable="true"/>
+            <ImageView
+                android:id="@+id/share_twitter"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_twitter_logo_dialog"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+
+
+<!--        Cast-->
+        <TextView
+            android:id="@+id/castHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Cast"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/castView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:nestedScrollingEnabled="false"/>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+<!--        Reviews-->
+        <TextView
+            android:id="@+id/reviewHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Reviews"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reviewView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"/>
+
+
+
+<!--        Recommended Picks-->
+        <TextView
+            android:id="@+id/recommendHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Recommended Picks"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommend_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

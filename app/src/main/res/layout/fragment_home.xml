@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    &lt;!&ndash;    The spinner&ndash;&gt;-->
+<!--    &lt;!&ndash;    Make a whole Screen for this spinner screen&ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/home_spinner1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="@color/dark_background"-->
+<!--        android:visibility="visible" >-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/home_spinnerIcon1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:paddingTop="300dp"-->
+<!--            android:background="@color/dark_background" />-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/loadingText"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textAlignment="center" />-->
+<!--    </LinearLayout>-->
+
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark_background"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:paddingTop="10dp"
+        android:paddingLeft="5dp">
+
+        <ImageView
+            android:id="@+id/home_header_img"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_theaters_white_18dp" />
+
+        <TextView
+            android:id="@+id/home_header_text"
+            android:layout_width="185dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/home_header_button_movie"
+            android:layout_width="62dp"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:background="@color/dark_background"
+            android:text="@string/home_header_movies"
+            android:textColor="@drawable/home_header_tab_text_color"
+            android:clickable="true"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:id="@+id/home_header_button_tv"
+            android:layout_width="68dp"
+            android:layout_height="29dp"
+            android:layout_weight="1"
+            android:background="@color/dark_background"
+            android:text="@string/home_header_tvs"
+            android:textColor="@drawable/home_header_tab_text_color"
+            android:clickable="true"
+            android:paddingTop="10dp"/>
+
+    </LinearLayout>
+
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:fillViewport="true"-->
+<!--        tools:layout_editor_absoluteX="119dp"-->
+<!--        tools:layout_editor_absoluteY="546dp">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedView"
+        android:layout_width="match_parent"
+        android:layout_height="628dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.496">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/home_content"
+                android:layout_width="403dp"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_background"
+                android:isScrollContainer="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <!--        </LinearLayout>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress_loader"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+
+<!--        android:layout_centerInParent="true"-->
+<!--        android:visibility="visible" />-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

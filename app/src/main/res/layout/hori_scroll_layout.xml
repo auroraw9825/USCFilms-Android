@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="130dp"-->
+<!--    android:layout_height="170dp"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_margin="15dp"-->
+<!--    android:background="#ffff"-->
+<!--    android:padding="7dp">-->
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="130dp"
+        android:layout_height="170dp"
+        android:layout_marginRight="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/horiCard">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="130dp"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:foreground="@drawable/gradient"/>
+        <ImageView
+            android:id="@+id/showMenuButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:layout_marginTop="140dp"
+            android:layout_marginLeft="100dp"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/item_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Item Title"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold" />-->
+
+    </androidx.cardview.widget.CardView>
+
+<!--</RelativeLayout>-->

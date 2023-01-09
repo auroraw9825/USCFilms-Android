@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="125dp"
+    android:layout_height="160dp"
+    android:layout_gravity="center"
+    android:layout_marginBottom="20dp"
+    android:layout_marginRight="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="false"
+    android:id="@+id/watchlist_resultCard">
+
+    <ImageView
+        android:id="@+id/watchlist_posterPath"
+        android:layout_width="125dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:foreground="@drawable/gradient"/>
+
+    <TextView
+        android:id="@+id/watchlist_mediaType"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/removeIcon"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="95dp"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/ic_baseline_remove_circle_outline_24"/>
+
+
+</androidx.cardview.widget.CardView>

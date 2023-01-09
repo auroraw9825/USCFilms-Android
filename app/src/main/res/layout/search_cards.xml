@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="370dp"
+    android:layout_height="170dp"
+    android:layout_gravity="center"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="false"
+    android:id="@+id/resultCard">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+
+    <ImageView
+        android:id="@+id/resultImg"
+        android:layout_width="370dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:foreground="@drawable/gradient"/>
+<!--    android:foreground="@drawable/gradient"-->
+<!--    android:scaleType="centerCrop" make the image full fit the card-->
+
+    <TextView
+        android:id="@+id/resultMedia_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellowRating"
+        android:text="@string/ratingStar"
+        android:textSize="18sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="323dp"/>
+
+
+    <TextView
+        android:id="@+id/resultRaing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="340dp"/>
+
+    <TextView
+        android:id="@+id/resultTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="130dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="28dp"-->
+<!--        android:layout_marginTop="142dp"-->
+<!--        android:foreground="@drawable/gradient_search_title"/>-->
+
+
+<!--    </LinearLayout>-->
+
+</androidx.cardview.widget.CardView>

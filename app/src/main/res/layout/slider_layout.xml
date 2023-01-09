@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/slider_parent">
+
+<!--    Image we will display is our slider view-->
+    <FrameLayout
+        android:layout_width="365dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp">
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+        <ImageView
+            android:id="@+id/bottomImage"
+            android:layout_width="365dp"
+            android:layout_height="400dp"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="270dp"
+            android:layout_height="400dp"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"/>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!--    The spinner-->
+    <!--    Make a whole Screen for this spinner screen-->
+    <LinearLayout
+        android:id="@+id/home_movie_spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/dark_background"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/home_movie_spinnerIcon1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="300dp"
+            android:background="@color/dark_background" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loadingText"
+            android:textColor="@color/white"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <!--  website: https://www.geeksforgeeks.org/auto-image-slider-in-android-with-example/
+    slideranimation duration is to set duration for transition between two slides
+    sliderautocycledirection is to set animationbetween transition of your slides
+    sliderindicator enables is used to display the indicators for slider
+    slider indicator gravity is to set gravity for indicator gravity
+    slider indicator margin is to set margin for indicator
+    slider indicator orientation is used to add orientation for slider
+    slider indicator padding is use to add padding to indicator
+    slider indicator selected color is use to specify selected color
+    and slider indicator unselected color is use to specify the color when the slider is unselected
+    slider scroll time in sec is used to specify scrolling time in seconds
+    -->
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorEnabled="true"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorMarginBottom="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="1dp"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderScrollTimeInSec="1"
+        android:visibility="invisible"/>
+
+
+<!--    Top Rated-->
+    <TextView
+        android:id="@+id/movieText1"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="480dp"
+        android:text="@string/text_topRated"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="invisible"/>
+<!--    android:layout_alignParentStart="true"-->
+<!--    android:layout_alignParentEnd="true"-->
+<!--    android:layout_alignParentRight="false"-->
+<!--    android:layout_alignParentBottom="false"-->
+<!--    android:layout_marginEnd="230dp"-->
+<!--    android:layout_marginRight="187dp"-->
+<!--    android:layout_marginBottom="145dp"-->
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal" />-->
+<!--    </ScrollView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="535dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"/>
+
+<!--    Popular-->
+    <TextView
+        android:id="@+id/movieText2"
+        android:layout_width="152dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="730dp"
+        android:text="@string/text_popular"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popular_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="780dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="invisible"/>
+
+<!--    Footer-->
+    <TextView
+        android:id="@+id/footerLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="970dp"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        android:text="@string/footer1"
+        android:textAlignment="center"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/footerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="995dp"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        android:text="@string/footer2"
+        android:textAlignment="center"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout >
